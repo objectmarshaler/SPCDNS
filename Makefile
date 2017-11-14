@@ -20,7 +20,7 @@
 
 VERSION := $(shell git describe --tag)
 
-CC      = gcc -std=c99
+CC      = x86_64-w64-mingw32-gcc.exe -std=c99
 CFLAGS  = -Wall -Wextra -pedantic -g
 LDFLAGS =
 LDLIBS  = -lm
@@ -62,6 +62,7 @@ all   : src/dotest src/libspcdns.a src/dns.so
 
 src/dotest      : src/dotest.o src/libspcdns.a
 src/libspcdns.a : src/codec.o src/mappings.o src/netsimple.o src/output.o
+src/libspcdns1.a : src/codec.o src/mappings.o
 src/dns.so      : src/luadns.oo src/codec.oo src/mappings.oo src/netsimple.oo
 
 install-lua : src/dns.so

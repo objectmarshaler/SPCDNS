@@ -68,9 +68,6 @@
 #include <math.h>
 #include <assert.h>
 
-#include <arpa/inet.h>
-#include <netinet/in.h>
-
 #include "dns.h"
 
 /*----------------------------------------------------------------------------

@@ -33,9 +33,6 @@
 #include <ctype.h>
 #include <assert.h>
 
-#include <arpa/inet.h>
-#include <netinet/in.h>
-
 #include "dns.h"
 #include "mappings.h"
 

@@ -52,8 +52,9 @@
 #include <stdbool.h>
 #include <stdint.h>
 #include <stddef.h>
-#include <arpa/inet.h>
-
+#include <winsock2.h>
+#include <Ws2tcpip.h>
+#include <windows.h>
 #ifdef __cplusplus
 #  define class dclass
 #  define restrict
@@ -89,6 +90,7 @@
 
 typedef uintptr_t dns_packet_t;
 typedef uintptr_t dns_decoded_t;
+typedef uint32_t in_addr_t;
 
 #define DNS_BUFFER_UDP		(  512uL / sizeof(dns_packet_t))
 #define DNS_DECODEBUF_4K	( 4096uL / sizeof(dns_decoded_t))
